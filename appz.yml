@@ -20,6 +20,7 @@ deploy:
 
 volumes:
   - claim: vault-home
+  - class: microk8s-hostpath
     mount: /appz/home
     name: home
     size: 5Gi
@@ -30,5 +31,5 @@ volumes:
 
 properties:
     revision: 55
-    ENABLE_AUTO_PASSWORD: False
+    ENABLE_AUTO_PASSWORD: True
     
